@@ -1,0 +1,322 @@
+/* Basic Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body & Typography Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header and Navigation Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+}
+
+
+.logo-container img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  
+}
+
+nav ul li {
+  padding: 0 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: #e1a07a;
+}
+
+/* Hero Section Styles */
+.hero {
+  background: url('img/hero.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.hero::after {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  color: #f8f8f8;
+  font-weight: 100;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.hero-buttons .btn {
+  padding: 15px 40px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+  background: #d2ab5c91;
+  color: white;
+  text-decoration: none;
+}
+
+.hero-buttons .btn:hover {
+  transform: scale(1.05);
+  background-color: #d2aa5c;
+}
+
+/* Menu Styles */
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.menu h2 {
+  text-align: center;
+  color: #333;
+  font-size: 3.5rem; /* Slightly larger for more impact */
+  font-weight: 100; /* Semi-bold for a touch of importance */
+  margin-bottom: 40px;
+  letter-spacing: 1px; /* Added spacing between letters for a refined look */
+  margin-top: 20px; /* Added top margin for better spacing from the navigation */
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.menu-item div {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.menu-item h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.menu-item p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #f8f8f8;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.about-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Styles for the photo collage */
+.photo-collage {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.photo-collage h3 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.collage-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.collage-container img {
+  width: calc(33.333% - 20px);
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.definition-section {
+  background: #fff;
+  padding: 40px;
+  margin: 40px auto;
+  border-left: 5px solid #d2aa5c;
+  max-width: 800px;
+}
+
+.definition-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dictionary-definition {
+  font-style: italic;
+  color: #555;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.dictionary-definition p {
+  margin-bottom: 10px;
+}
+
+.dictionary-definition p strong {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.dictionary-definition p em {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: normal;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding-top: 15px;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+  }
+
+  .menu-item img {
+    width: 100%;
+  }
+
+  .menu-item div {
+    padding: 15px;
+  }
+
+  .menu-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .menu-item p {
+    font-size: 0.9rem;
+  }
+
+  .collage-container {
+    flex-direction: column;
+  }
+
+  .collage-container img {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+}
